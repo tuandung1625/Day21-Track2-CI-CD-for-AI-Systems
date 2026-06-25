@@ -1,5 +1,3 @@
-from xml.parsers.expat import model
-
 import mlflow
 import mlflow.sklearn
 import pandas as pd
@@ -79,8 +77,6 @@ def train(
         # File nay duoc upload len GCS o Buoc 2
         os.makedirs("models", exist_ok=True)
         joblib.dump(model, "models/model.pkl")
-
-        pass  # xoa dong nay sau khi hoan thanh tat ca TODO ben tren
 
     # TODO 10: Tra ve acc
     return acc
